@@ -1,10 +1,10 @@
 {
   "name": "metalsmith-express",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Metalsmith middleware to serve files with express",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/.bin/tape 'tests/**/*.js'"
   },
   "repository": {
     "type": "git",
@@ -19,8 +19,12 @@
   "author": "Christopher 'Chief' Najewicz <chief@beefdisciple.com>",
   "license": "MIT",
   "dependencies": {
+    "chalk": "^1.1.1",
     "connect-livereload": "^0.5.3",
     "express": "^4.13.3",
     "lodash": "^3.10.1"
+  },
+  "devDependencies": {
+    "tape": "^4.2.1"
   }
 }

@@ -1,9 +1,9 @@
 'use strict';
 
 var
-  Server = require('./lib/server'),
-  _ = require('lodash'),
-  path = require('path'),
+  server  = require('./lib/server'),
+  _       = require('lodash'),
+  path    = require('path'),
   _server = null;
 
 function middleware(options, files, metalsmith, next) {
@@ -17,7 +17,7 @@ function middleware(options, files, metalsmith, next) {
 
     _.defaults(options, { document_root: document_root });
 
-    _server = Server(options);
+    _server = server(options);
     _server.start(next);
 }
 
