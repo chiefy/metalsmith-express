@@ -19,6 +19,7 @@
   "author": "Christopher 'Chief' Najewicz <chief@beefdisciple.com>",
   "license": "MIT",
   "dependencies": {
+    "connect-livereload": "^0.5.3",
     "express": "^4.13.3",
     "lodash": "^3.10.1"
   }
