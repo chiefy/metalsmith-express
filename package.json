@@ -4,7 +4,7 @@
   "description": "Metalsmith middleware to serve files with express",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/tape 'tests/**/*.js'"
+    "test": "npx mocha"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,8 @@
     "lodash": "^3.10.1"
   },
   "devDependencies": {
-    "tape": "^4.2.1"
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1",
+    "test-console": "^1.1.0"
   }
 }

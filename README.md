@@ -53,7 +53,6 @@ var metalsmithExpress = require('metalsmith-express')
 ```
 
 ### Todo
-  * Tests!
   * Allow for any valid middleware pattern
 
 ### License
