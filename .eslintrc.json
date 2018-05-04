@@ -1,0 +1,64 @@
+{
+  "env": {
+    "node": true
+  },
+  "globals": {},
+  "root": true,
+  "rules": {
+    "indent": [
+      "error", 
+      2,
+      {
+        "SwitchCase": 1,
+        "VariableDeclarator": 1
+      }
+    ],
+    "strict": [
+      "error",
+      "global"
+    ],
+    "block-scoped-var"        : "off",
+    "camelcase"               : "off",
+    "complexity"              : "off",
+    "curly"                   : "error",
+    "dot-notation"            : "error",
+    "eqeqeq"                  : "error",
+    "guard-for-in"            : "error",
+    "linebreak-style"         : "off",
+    "max-depth"               : "off",
+    "max-len"                 : "off",
+    "max-params"              : "off",
+    "max-statements"          : "off",
+    "new-cap"                 : "off",
+    "no-bitwise"              : "error",
+    "no-caller"               : "error",
+    "no-cond-assign"          : "off",
+    "no-debugger"             : "off",
+    "no-empty"                : "error",
+    "no-eq-null"              : "off",
+    "no-eval"                 : "off",
+    "no-extend-native"        : "error",
+    "no-invalid-this"         : "off",
+    "no-irregular-whitespace" : "off",
+    "no-iterator"             : "off",
+    "no-loop-func"            : "off",
+    "no-multi-str"            : "off",
+    "no-new"                  : "off",
+    "no-new-func"             : "off",
+    "no-new-wrappers"         : "off",
+    "no-plusplus"             : "off",
+    "no-proto"                : "off",
+    "no-script-url"           : "off",
+    "no-shadow"               : "error",
+    "no-undef"                : "error",
+    "no-unused-expressions"   : "off",
+    "no-unused-vars"          : "error",
+    "no-use-before-define"    : "off",
+    "no-var"                  : "off",
+    "quotes"                  : "off",
+    "require-yield"           : "off",
+    "semi"                    : "off",
+    "valid-typeof"            : "off",
+    "wrap-iife"               : "off"
+  }
+}
