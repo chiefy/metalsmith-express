@@ -2,7 +2,6 @@
   "env": {
     "node": true
   },
-  "globals": {},
   "root": true,
   "rules": {
     "indent": [
