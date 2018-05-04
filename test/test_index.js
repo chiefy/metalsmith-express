@@ -21,8 +21,8 @@ describe('index.js', function() {
   describe('The exported function', function() {
     let pluginFn
 
-    before(async function() {
-      pluginFn = await metalsmithExpressPlugin({'document_root':'.'})
+    before(function() {
+      pluginFn = metalsmithExpressPlugin({'document_root':'.'})
     })
 
     it('should return the plugin function', function() {

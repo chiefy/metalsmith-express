@@ -2,6 +2,8 @@
  *  IMPORTS
  */
 
+/*eslint no-unused-vars: ["error", { "varsIgnorePattern": "stderr" }]*/
+
 //  test tools
 const expect = require('chai').expect
 const {stdout,stderr} = require('test-console')
