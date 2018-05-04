@@ -4,6 +4,7 @@
   "description": "Metalsmith middleware to serve files with express",
   "main": "index.js",
   "scripts": {
+    "lint": "npx eslint index.js lib/*.js test/*.js",
     "test": "npx mocha"
   },
   "repository": {
@@ -26,6 +27,7 @@
   },
   "devDependencies": {
     "chai": "^4.1.2",
+    "eslint": "^4.19.1",
     "mocha": "^5.1.1",
     "test-console": "^1.1.0"
   }

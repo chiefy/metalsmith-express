@@ -7,18 +7,18 @@ var
   _server = null;
 
 function middleware(options, files, metalsmith, next) {
-    if(_server) {
-      return next();
-    }
+  if(_server) {
+    return next();
+  }
 
-    var document_root = options.document_root ?
-      path.resolve(options.document_root) :
-      metalsmith.destination();
+  var document_root = options.document_root ?
+    path.resolve(options.document_root) :
+    metalsmith.destination();
 
-    _.defaults(options, { document_root: document_root });
+  _.defaults(options, { document_root: document_root });
 
-    _server = server(options);
-    _server.start(next);
+  _server = server(options);
+  _server.start(next);
 }
 
 module.exports = function metalsmith_express(options) {
