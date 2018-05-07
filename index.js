@@ -23,7 +23,7 @@ function middleware(options, files, metalsmith, next) {
 
 module.exports = function metalsmith_express(options) {
   options = options || {};
-  return function(files, metalsmith, next) {
+  return function metalsmith_express_plugin(files, metalsmith, next) {
     return middleware(options, files, metalsmith, next);
   };
 };
