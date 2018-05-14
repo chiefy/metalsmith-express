@@ -2,7 +2,6 @@
 
 var
   server  = require('./lib/server'),
-  _       = require('lodash'),
   path    = require('path'),
   _server = null;
 
@@ -15,7 +14,7 @@ function middleware(options, files, metalsmith, next) {
     path.resolve(options.document_root) :
     metalsmith.destination();
 
-  _.defaults(options, { document_root: document_root });
+  Object.assign(options, { document_root: document_root });
 
   _server = server(options);
   _server.start(next);

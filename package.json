@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "npx eslint index.js lib/*.js test/*.js",
-    "test": "npx mocha"
+    "test": "npx mocha",
+    "coverage": "npx nyc npm test"
   },
   "repository": {
     "type": "git",
@@ -22,13 +23,16 @@
   "dependencies": {
     "chalk": "^2.4.1",
     "connect-livereload": "^0.6.0",
-    "express": "^4.13.3",
-    "lodash": "^4.17.10"
+    "express": "^4.13.3"
   },
   "devDependencies": {
     "chai": "^4.1.2",
     "eslint": "^4.19.1",
     "mocha": "^5.1.1",
+    "nyc": "^11.7.3",
     "test-console": "^1.1.0"
+  },
+  "peerDependencies": {
+    "metalsmith": "2.x"
   }
 }
