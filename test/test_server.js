@@ -55,3 +55,31 @@ describe('server.js', function() {
   })
 
 })
+
+describe('staticOptions', function() {
+  const http = require('http')
+  let controller
+
+  before(function() {
+    let suppressOutput = stdout.ignore()
+    controller = metalsmithExpressServer({
+      'document_root': __dirname,
+      'port': 3001,
+      'staticOptions': { 'extensions': ['js'] }
+    })
+    controller.start(suppressOutput)
+  })
+
+  after(function() {
+    let suppressOutput = stdout.ignore()
+    controller.stop(suppressOutput)
+  })
+
+  it('should serve a file using the `extensions` option', function(done) {
+    http.get('http://127.0.0.1:3001/test_server', { 'agent': false }, function(res) {
+      expect(res.statusCode).to.equal(200)
+      res.resume()
+      done()
+    })
+  })
+})
