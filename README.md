@@ -34,7 +34,8 @@ metalsmith(__dirname)
 {
   "liveReload": true,
   "liveReloadPort": 35729,
-  "middleware": []
+  "middleware": [],
+  "staticOptions": {}
 }
 ```
 You may use  `express` middleware by pushing it onto the `middleware` option array. Currently only the `use(function(req,res,next))` convention is supported.
@@ -49,6 +50,17 @@ middleware.push(function(req, res, next) {
 var metalsmithExpress = require('metalsmith-express')
 ({
   middleware: middleware
+});
+```
+
+Options for [`express.static`](http://expressjs.com/en/api.html#express.static) (i.e. [`serve-static`](https://github.com/pillarjs/serve-static)) can be passed through the `staticOptions` option. For example, to serve `foo.html` when `foo` is requested:
+```javascript
+var metalsmithExpress = require('metalsmith-express');
+
+metalsmithExpress({
+  staticOptions: {
+    extensions: ['html']
+  }
 });
 ```
 
